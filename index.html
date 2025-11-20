@@ -1,103 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio </title>
+    <title>Aayush Mandal | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>I'm Aayush Mandal</h1>
-    </header>
+    <!-- Step 6: Dark/Light Mode Toggle & Step 7: Back to Top -->
+    <button id="theme-toggle">☀️</button>
+    <button id="back-to-top">⬆️</button>
 
-    <!-- Navigation Bar -->
     <nav>
+        <div class="logo">Aayush.dev</div>
         <ul>
-            <li><a href="#bio">IT student</a></li>
-            <li><a href="#education"> +2 bio science </a></li>
-            <li><a href="#interests"> I'm passionate about web development, artificial intelligence, and game development, always exploring new ways to create and innovate with technology.</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#media">Media</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Short Bio Section -->
-    <section id="bio">
-        <h2>Short Bio</h2>
-        <img src="hero.png" alt="My Profile Image width="150" height="150">"
-        <p>Hi, my name is Aayush Mandal. I am a passionate student eager to learn new skills and grow in the field of web development. My main interest is creating websites and applications that can help others. I have a strong foundation in HTML, CSS, and JavaScript, and I am constantly improving my skills through projects and coursework.</p>
-        <p><strong>Interested Field:</strong> Web Development, Software Engineering, UI/UX Design</p>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Aayush Mandal</span></h1>
+            <h3>IT Student & Web Developer</h3>
+            <p>Passionate about AI, Game Dev, and creating innovative web solutions.</p>
+        </div>
+        <div class="hero-image">
+            <img src="hero.png" alt="Aayush Mandal">
+        </div>
     </section>
 
-    <!-- Education History Section -->
-    <section id="education">
-        <h2>Education History</h2>
-        <table>
-            <tr>
-                <th>Degree</th>
-                <th>Institution</th>
-                <th>Year</th>
-            </tr>
-            <tr>
-                <td>Bachelor of Science
-                     in Computer Science</td>
-                <td>University of Wolverhampton</td>
-                <td>2025 - Present</td>
-            </tr>
-            <tr>
-                <td>biological science</td>
-                <td>Orchid  College</td>
-                <td> 2024 </td>
-            </tr>
-        </table
+    <!-- Step 1: Animated Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skill-container">
+            <p>HTML/CSS</p>
+            <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+            
+            <p>JavaScript</p>
+            <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+            
+            <p>Python</p>
+            <div class="progress-bar"><div class="progress" data-width="60%"></div></div>
+        </div>
     </section>
 
-    <!-- Interests and Hobbies Section -->
-    <section id="interests">
-        <h2>Interests & Hobbies</h2>
-        <h3>Interests:</h3>
-        <ul>
-            <li>Technology and Web Development</li>
-            <li>Artificial Intelligence</li>
-            <li>Game Development</li>
-        </ul>
+    <!-- Step 3: Projects (No <a> tags allowed for links) & Step 8: Flexbox/Grid Note -->
+    <section id="projects">
+        <h2>Projects (JS Links) & Layout Note</h2>
+        
+        <!-- Step 8 Note -->
+        <div class="layout-note">
+            <h3>Flexbox vs Grid</h3>
+            <p><strong>Flexbox</strong> is one-dimensional (rows OR columns), perfect for aligning items like navbars. <strong>Grid</strong> is two-dimensional (rows AND columns), best for complex page layouts.</p>
+        </div>
 
-        <h3>Hobbies:</h3>
-        <ul>
-            <li>Programming</li>
-            <li>Playing Video Games</li>
-            <li>Reading Science Fiction Books</li>
-        </ul>
+        <div class="cards-container">
+            <!-- Clicking these triggers JS, not <a href> -->
+            <div class="card project-card" id="project1">
+                <h3>Project 1: Portfolio</h3>
+              <p>Click to visit Github</p>
+            </div>
+            <div class="card project-card" id="project2">
+                <h3>Project 2: AI Model</h3>
+                <p>Click to visit Google</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Contact Form Section -->
+    <!-- Step 5: Image Slider -->
+    <section id="slider-section">
+        <h2>Image Slider</h2>
+        <div class="slider-container">
+            <button id="prevBtn">❮</button>
+            <div class="slider-image">
+                <!-- You can replace these src with real image URLs -->
+                <img src="hero.png" class="slide active" alt="Slide 1">
+                <img src="pp.jpg" class="slide" alt="Slide 2">
+                <img src="Aayush.jpg" class="slide" alt="Slide 3">
+            </div>
+            <button id="nextBtn">❯</button>
+        </div>
+    </section>
+
+    <!-- Step 4: Media (Video, Audio, Canvas) -->
+    <section id="media">
+        <h2>Multimedia & Canvas</h2>
+        <div class="media-grid">
+            <div class="media-item">
+                <h3>Video</h3>
+                <!-- Add a real video file named video.mp4 or use a placeholder -->
+                <video width="300" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+            </div>
+            <div class="media-item">
+                <h3>Audio</h3>
+                <!-- Add a real audio file named audio.mp3 -->
+                <audio controls>
+                    <source src="audio.mp3" type="audio/mpeg">
+                    Your browser does not support audio.
+                </audio>
+            </div>
+            <div class="media-item">
+                <h3>Canvas API</h3>
+                <canvas id="myCanvas" width="200" height="100" style="border:1px solid #fff;"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 2: Contact Form -->
     <section id="contact">
-        <h2>9820367134</h2>
-        <form action="#" method="post">
-            <label for="name">Aayush Mandal:</label>
-            <input type="text" id="name" name="name" required><br>
-
-            <label for="email">aayushmandal0018@gmail.com:</label>
-            <input type="email" id="email" name="email" required><br>
-
-            <label for="message">Thank you :</label>
-            <textarea id="message" name="message" rows="4" required></textarea><br>
-
-            <button type="submit">Submit</button>
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label>Message:</label>
+                <textarea id="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
         </form>
     </section>
 
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Aayush Mandal. All rights reserved.</p>
-        <p>Follow me on social media: 
-            <a href= " https://www.instagram.com/aayushmandal1010">instagram</a> 
-        </p>
+        <p>&copy; 2025 Aayush Mandal.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
-
 </html>

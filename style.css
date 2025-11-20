@@ -1,0 +1,55 @@
+/* Default Dark Mode Variables */
+:root {
+    --bg-color: #0f172a;
+    --text-color: #e2e8f0;
+    --card-bg: #1e293b;
+    --accent: #38bdf8;
+}
+
+/* Step 6: Light Mode Variables */
+.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f3f4f6;
+    --accent: #0284c7;
+}
+
+* { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background-color: var(--bg-color); color: var(--text-color); margin: 0; transition: 0.3s; }
+
+/* Utils */
+.btn { padding: 10px 20px; background: var(--accent); border: none; color: #fff; cursor: pointer; border-radius: 5px;}
+nav { background: var(--card-bg); padding: 15px; display: flex; justify-content: space-between; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav a { color: var(--text-color); text-decoration: none; }
+section { padding: 50px 20px; max-width: 800px; margin: auto; }
+
+/* Hero */
+.hero-section { display: flex; align-items: center; justify-content: space-between; }
+.hero-image img { width: 200px; border-radius: 50%; border: 3px solid var(--accent); }
+
+/* Step 1: Progress Bars */
+.progress-bar { background: #334155; height: 20px; border-radius: 10px; overflow: hidden; margin-bottom: 15px; }
+.progress { height: 100%; background: var(--accent); width: 0; transition: width 1.5s ease-in-out; }
+
+/* Step 3: Project Cards */
+.cards-container { display: flex; gap: 20px; }
+.card { background: var(--card-bg); padding: 20px; border-radius: 10px; flex: 1; cursor: pointer; transition: transform 0.2s; }
+.card:hover { transform: translateY(-5px); border: 1px solid var(--accent); }
+
+/* Step 5: Slider */
+.slider-container { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.slide { display: none; width: 300px; height: 200px; object-fit: cover; border-radius: 10px; }
+.slide.active { display: block; }
+
+/* Step 6 & 7: Floating Buttons */
+#theme-toggle, #back-to-top {
+    position: fixed; bottom: 20px; right: 20px; padding: 10px; 
+    border-radius: 50%; border: none; cursor: pointer; font-size: 1.2rem;
+}
+#theme-toggle { right: 70px; background: var(--card-bg); }
+#back-to-top { display: none; background: var(--accent); }
+
+/* Form */
+.form-group { margin-bottom: 15px; }
+input, textarea { width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc;}
